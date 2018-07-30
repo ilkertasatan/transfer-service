@@ -41,7 +41,7 @@ You can find usage the API methods in Swagger. To access the Swagger UI, you sho
 
 http://{hosting-environment}/swagger-ui.html
 
-If you build up the application in your local machine, you have to write localhost instead of hosting-environment variable.
+If you build up the application in your local machine, you have to write localhost instead of hosting-environment variable. The port must be 8080 for localhost.
 
 Also, health and metrics was implemented in the application and so you can check the application healthy at regular intervals.
 

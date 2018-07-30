@@ -1,7 +1,10 @@
 package com.ingenico.epayments.transferservice.domain;
 
+import io.swagger.annotations.ApiModelProperty;
+
 public class Account implements Identifiable {
 
+    @ApiModelProperty(hidden = true)
     private Long id;
     private String name;
     private double balance;

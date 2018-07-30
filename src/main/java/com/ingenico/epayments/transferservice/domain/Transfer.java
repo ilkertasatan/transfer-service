@@ -1,16 +1,21 @@
 package com.ingenico.epayments.transferservice.domain;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import io.swagger.annotations.ApiModelProperty;
 
 import java.util.Date;
 
 public class Transfer implements Identifiable {
 
+    @ApiModelProperty(hidden = true)
     private Long id;
     private Long sourceAccountId;
     private Long targetAccountId;
+
+    @ApiModelProperty(hidden = true)
     @JsonFormat(pattern="yyyy-MM-dd")
     private Date date;
+
     private double amount;
 
     @Override

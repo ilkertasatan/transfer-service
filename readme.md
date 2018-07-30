@@ -1,6 +1,6 @@
 ## Solution Design
 
-My solution consist of three tiers such as Web Service, Application Service and Repository. It was designed as a multi-tier architecture by me.
+My solution consists of three tiers such as Web Service, Application Service and Repository. It was designed as a multi-tier architecture by myself.
 
 First tier is the Web Service Tier which has API methods are triggered by client is responsible for translating HTTP requests into calls to application services via interfaces. It has no other responsibility except that communicating application services and only knows the contract of application services.
 
@@ -37,7 +37,7 @@ Some IDEs provide the option to export a project as a WAR file. However, if one 
 	
 ## Usage / Examples
 
-You can find usage the API methods in Swagger. To access the Swagger UI, you should type address below;
+You can find the usage of the API methods in Swagger. To access the Swagger UI, you should type address below;
 
 http://{hosting-environment}/swagger-ui.html
 
@@ -46,7 +46,7 @@ If you build up the application in your local machine, you have to write localho
 Also, health and metrics was implemented in the application and so you can check the application healthy at regular intervals.
 
 To check health the application;
-http://{hosting-environment}/health
+http://{hosting-environment}:8002/health
 
 To check the metrics;
-http://{hosting-environment}/metrics
+http://{hosting-environment}:8002/metrics

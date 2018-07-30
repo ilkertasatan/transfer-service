@@ -21,13 +21,13 @@ public class TransferController {
     @Autowired
     private TransferService transferService;
 
-    @RequestMapping(method = RequestMethod.POST, consumes = "application/json")
+    @RequestMapping(method = RequestMethod.POST)
     public ResponseEntity make(@RequestBody Transfer transfer) throws Exception {
         transferService.makeTransfer(transfer);
         return new ResponseEntity(transfer.getId(), HttpStatus.CREATED);
     }
 
-    @RequestMapping(value = "/{id}", method = RequestMethod.GET, consumes = "application/json")
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public Transfer get(@PathVariable Long id) throws Exception {
         Transfer transfer = transferService.getTransfer(id);
         return transfer;

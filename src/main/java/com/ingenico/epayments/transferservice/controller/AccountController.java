@@ -21,19 +21,19 @@ public class AccountController {
     @Autowired
     private AccountService accountService;
 
-    @RequestMapping(method = RequestMethod.POST, consumes = "application/json")
+    @RequestMapping(method = RequestMethod.POST)
     public ResponseEntity create(@RequestBody Account account) throws Exception {
         accountService.createAccount(account);
         return new ResponseEntity(account.getId(), HttpStatus.CREATED);
     }
 
-    @RequestMapping(method = RequestMethod.GET, consumes = "application/json")
+    @RequestMapping(method = RequestMethod.GET)
     public List<Account> getAll() {
         List<Account> accounts = accountService.getAllAccounts();
         return accounts;
     }
 
-    @RequestMapping(value = "/{id}", method = RequestMethod.GET, consumes = "application/json")
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public Account get(@PathVariable Long id) throws Exception {
         Account account = accountService.getAccount(id);
         return account;
